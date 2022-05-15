@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name" translatable="false">Trabalho 2</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label" translatable="false">Main</string>
+    <string name="second_fragment_label" translatable="false">Times</string>
+    <string name="next" translatable="false">Times</string>
+    <string name="previous" translatable="false">Previous</string>
+    <string name="description" translatable="false">Descrição</string>
+    <string name="showAll">Mostrar todos</string>
+    <string name="update">atualizar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="selicionarTime">Selecione um Time</string>
+    <string name="deletar">deletar</string>
+    <string name="atualizar">atualizar</string>
+    <string name="novadescricao">Nova descrição</string>
+    <string name="jogadores">jogadores</string>
+    <string name="idade">idade</string>
+    <string name="cpf">Cpf</string>
+    <string name="add">add</string>
+    <string name="nome">Nome</string>
+
+
+</resources>

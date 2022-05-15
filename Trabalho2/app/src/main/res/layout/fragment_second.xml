@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondFragment">
+
+    <EditText
+        android:id="@+id/editDescricao"
+        android:layout_width="357dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/description"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/idBtnAddTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.015"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editDescricao" />
+
+    <Button
+        android:id="@+id/btnShowTimes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/showAll"
+        app:layout_constraintBottom_toBottomOf="@+id/idBtnAddTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toEndOf="@+id/idBtnAddTime"
+        app:layout_constraintTop_toTopOf="@+id/idBtnAddTime"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ListView
+        android:id="@+id/viewTime"
+        android:layout_width="346dp"
+        android:layout_height="486dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idBtnAddTime" />
+
+    <Button
+        android:id="@+id/btnAtualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="@string/update"
+        app:layout_constraintBottom_toBottomOf="@+id/btnShowTimes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btnShowTimes"
+        app:layout_constraintTop_toTopOf="@+id/btnShowTimes"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

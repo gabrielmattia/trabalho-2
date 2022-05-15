@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.trabalho2.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_secondJogadores"
+            app:destination="@id/secondJogadores" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.trabalho2.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_ThirdFragment"
+            app:destination="@id/ThirdFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ThirdFragment"
+        android:name="com.example.trabalho2.ThirdFragment"
+        android:label="Atulizar Times"
+        tools:layout="@layout/fragment_third" >
+        <action
+            android:id="@+id/action_thirdFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondJogadores"
+        android:name="com.example.trabalho2.SecondJogadores"
+        android:label="Jogadores"
+        tools:layout="@layout/second_jogadores_fragment" >
+        <action
+            android:id="@+id/action_secondJogadores_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_secondJogadores_to_todosJogadores"
+            app:destination="@id/todosJogadores" />
+        <action
+            android:id="@+id/action_secondJogadores_to_updateJogador"
+            app:destination="@id/updateJogador" />
+    </fragment>
+    <fragment
+        android:id="@+id/todosJogadores"
+        android:name="com.example.trabalho2.TodosJogadores"
+        android:label="Todos Jogadores"
+        tools:layout="@layout/todos_jogadores_fragment" >
+        <action
+            android:id="@+id/action_todosJogadores_to_secondJogadores"
+            app:destination="@id/secondJogadores" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateJogador"
+        android:name="com.example.trabalho2.UpdateJogador"
+        android:label="Atualiza Jogador"
+        tools:layout="@layout/update_jogador_fragment" >
+        <action
+            android:id="@+id/action_updateJogador_to_secondJogadores"
+            app:destination="@id/secondJogadores" />
+    </fragment>
+</navigation>
