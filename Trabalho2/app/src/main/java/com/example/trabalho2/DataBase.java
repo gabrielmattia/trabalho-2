@@ -89,6 +89,7 @@ public class DataBase extends SQLiteOpenHelper {
 
         return  cursor.getString(0);
     }
+
     public boolean deleteJogador (String id){
 
 
@@ -213,11 +214,30 @@ public class DataBase extends SQLiteOpenHelper {
 
     }
     public boolean delete (String descricao){
-
+        String query = String.format("SELECT * FROM jogador WHERE idTime =?; " );
         SQLiteDatabase db= this.getWritableDatabase();
 
+        Cursor cursor = db.rawQuery(query, new String[]{String.valueOf(descricao)});
 
-        return db.delete(TIME, ID_TIME + "=?", new String[]{descricao}) > 0;
+        cursor.moveToFirst();
+
+
+        
+
+
+        if(cursor.moveToFirst()){
+            cursor.close();
+
+            return false;
+
+        }else{
+            cursor.close();
+            return db.delete(TIME, ID_TIME + "=?", new String[]{descricao}) > 0;
+
+        }
+
+
+
     }
     public long update (String descricao, String novaDescricao){
 
